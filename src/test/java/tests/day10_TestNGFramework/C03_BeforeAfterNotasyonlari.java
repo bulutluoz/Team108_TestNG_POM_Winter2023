@@ -53,7 +53,7 @@ public class C03_BeforeAfterNotasyonlari {
     }
     @AfterSuite
     public void afterSuite(){
-        System.out.println("After Test");
+        System.out.println("After Suite");
     }
 
     @AfterTest

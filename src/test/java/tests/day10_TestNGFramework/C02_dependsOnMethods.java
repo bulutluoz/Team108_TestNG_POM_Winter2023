@@ -7,12 +7,31 @@ import pages.AmazonPage;
 import utilities.Driver;
 
 public class C02_dependsOnMethods {
+    /*
+        Priority oncelik belirler ama testleri birbirine baglamaz
+
+        eger bir test method'unun calismasi baska bir test method'una bagli ise
+        bu durumda dependsOnMethods kullanmak daha guzel olur
+
+        dependsOnMethod ile baska bir method'a bagli olan method'u bagimsiz calistirmak istersek
+        once bagli oldugui method'u calistirir, sonra kendisi calisir
+        Ancak bu 2 method icin gecerlidir, 3 method calistirmaz
+
+        dependsOnMethods bir siralama yontemi DEGILDIR
+        sira bagli olan bir method'a geldiginde,
+        oncelikle bagli oldugu method'un calismasini ve PASSED olmasini bekler
+
+        Eger bagli olunan method FAILED olursa
+        bagli olan method calistirilmaz, IGNORE edilir
+
+     */
 
     // 3 test method'u olusturun
     // 1. amazona gidip amazona gittigimizi test edin
     // 2. Nutella aratip, sonucun Nutella icerdigini test edin
     // 3. ilk urune click yapip, urun isminin Nutella icerdigini test edin
     AmazonPage amazonPage = new AmazonPage();
+
     @Test
     public void amazonTesti(){
 
@@ -24,7 +43,7 @@ public class C02_dependsOnMethods {
         Assert.assertTrue(actualurl.contains(expectedIcerik));
     }
 
-    @Test
+    @Test(dependsOnMethods = "amazonTesti")
     public void nutellaTesti(){
 
 
@@ -37,7 +56,7 @@ public class C02_dependsOnMethods {
 
     }
 
-    @Test
+    @Test(dependsOnMethods = "nutellaTesti")
     public void ilkUrunTesti(){
        amazonPage.ilkUrun.click();
 
@@ -46,6 +65,7 @@ public class C02_dependsOnMethods {
 
        Assert.assertTrue(actualUrunIsmi.contains(expectedIcerik));
 
+       Driver.closeDriver();
     }
 
 }

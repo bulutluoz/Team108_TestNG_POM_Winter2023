@@ -12,7 +12,7 @@ public class C02_dependsOnMethods {
     // 1. amazona gidip amazona gittigimizi test edin
     // 2. Nutella aratip, sonucun Nutella icerdigini test edin
     // 3. ilk urune click yapip, urun isminin Nutella icerdigini test edin
-
+    AmazonPage amazonPage = new AmazonPage();
     @Test
     public void amazonTesti(){
 
@@ -27,7 +27,7 @@ public class C02_dependsOnMethods {
     @Test
     public void nutellaTesti(){
 
-        AmazonPage amazonPage = new AmazonPage();
+
         amazonPage.aramaKutusu.sendKeys("Nutella" + Keys.ENTER);
 
         String expectedIcerik = "Nutella";
@@ -39,7 +39,12 @@ public class C02_dependsOnMethods {
 
     @Test
     public void ilkUrunTesti(){
+       amazonPage.ilkUrun.click();
 
+       String expectedIcerik="Nutella";
+       String actualUrunIsmi= amazonPage.ilkUrunIsimElementi.getText();
+
+       Assert.assertTrue(actualUrunIsmi.contains(expectedIcerik));
 
     }
 

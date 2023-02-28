@@ -26,11 +26,17 @@ public class AmazonPage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(id="twotabsearctextbox")
+    @FindBy(id="twotabsearchtextbox")
     public WebElement aramaKutusu;
 
     @FindBy(xpath = "//h1[@class='a-size-base s-desktop-toolbar a-text-normal']")
     public WebElement aramaSonucElementi;
+
+    @FindBy(xpath = "(//img[@class='s-image'])[1]")
+    public WebElement ilkUrun;
+
+    @FindBy(xpath = "//span[@id='productTitle']")
+    public WebElement ilkUrunIsimElementi;
 
 
 

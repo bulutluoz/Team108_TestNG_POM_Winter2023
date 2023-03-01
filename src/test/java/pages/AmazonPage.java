@@ -27,7 +27,7 @@ public class AmazonPage {
     }
 
     @FindBy(id="twotabsearchtextbox")
-    public WebElement aramaKutusu;
+    public static WebElement aramaKutusu;
 
     @FindBy(xpath = "//h1[@class='a-size-base s-desktop-toolbar a-text-normal']")
     public WebElement aramaSonucElementi;

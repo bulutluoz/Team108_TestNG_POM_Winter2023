@@ -2,13 +2,10 @@ package tests.day11_POM_assertions;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.AmazonPage;
 import pages.QdPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
-
-import java.awt.dnd.DragGestureEvent;
 
 public class C03_NegatifLoginTesti {
 

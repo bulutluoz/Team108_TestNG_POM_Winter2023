@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<!-- pozitif login testini ve negatif login testlerinden sadece 3.yu calistiralim
+     bu durumda bir test method'u, bir de test class'i calistirmak istiyoruz
+
+     Eger calistiracagimiz dosyalar farkli hiyerarsilere sahipse
+
+     1- ya ayri <test> tag'lerinin arasina koyariz
+     2- uygun hiyerarsi adimindan yeni bir hiyerarsi olustururuz
+-->
+
+<suite name="istenen method'lari calistirma">
+    <test name="mini smoke">
+
+        <classes>
+            <class name="tests.day11_POM_assertions.C03_NegatifLoginTesti">
+                <methods>
+                    <include name="negatifLogin3"></include>
+                </methods>
+            </class>
+            <class name="tests.day11_POM_assertions.C02_PozitifLoginTesti"></class>
+        </classes>
+
+    </test>
+
+</suite>

@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class C06_SoftAssert {
-    @Test
+    @Test(groups = {"mr1","mr2"})
     public void webappTesti(){
         // 1. “http://zero.webappsecurity.com/” Adresine gidin
         Driver.getDriver().get(ConfigReader.getProperty("zeroUrl"));

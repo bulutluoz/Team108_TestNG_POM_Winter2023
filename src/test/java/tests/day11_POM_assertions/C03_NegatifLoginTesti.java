@@ -6,6 +6,7 @@ import pages.AmazonPage;
 import pages.QdPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 import java.awt.dnd.DragGestureEvent;
 
@@ -22,7 +23,8 @@ public class C03_NegatifLoginTesti {
 
     @Test
     public void negatifLogin1(){
-
+        ReusableMethods.bekle(3);
+        qdPage= new QdPage();
         Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
         qdPage.ilkLoginLinki.click();
         qdPage.emailKutusu.sendKeys(ConfigReader.getProperty("qdGecerliUsername"));

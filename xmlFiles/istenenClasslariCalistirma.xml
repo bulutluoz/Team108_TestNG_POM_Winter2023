@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<!-- 
+    .xml dosyalari TestNG framework'umuzdeki
+    istedigimiz class, package, test method'u veya gruplari
+    toplu olarak calistirma imkani verir
+    
+    Calismasini istedigimiz dosyalari 
+    test hiyerarsisine uygun olarak .xml dosyamiza ekleriz   
+-->
+
+<suite name="istenen classlari calistirma">
+    <test name="smoke test">
+        
+        <classes>
+            <class name="tests.day11_POM_assertions.C02_PozitifLoginTesti"></class>
+            <class name="tests.day11_POM_assertions.C03_NegatifLoginTesti"></class>
+        </classes>
+        
+    </test>
+</suite>

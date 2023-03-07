@@ -3,16 +3,16 @@
     <test name="Sirali crosbrowser chrome">
         <parameter name="browser" value="chrome"></parameter>
         <classes>
-            <class name="tests.day11_POM_assertions.C02_PozitifLoginTesti"></class>
-            <class name="tests.day10_TestNGFramework.C01_Priority"></class>
+            <class name="tests.day13_crossBrowserTests.C01_PozitifLoginTestiCross"></class>
+            <class name="tests.day13_crossBrowserTests.C02_AmazonTestCross"></class>
         </classes>
     </test>
 
     <test name="Sirali crosbrowser firefox">
         <parameter name="browser" value="firefox"></parameter>
         <classes>
-            <class name="tests.day12_xmlFiles.C02_ReusableMethodsSwitchingwindows"></class>
-            <class name="tests.day11_POM_assertions.C05_SoftAssert"></class>
+            <class name="tests.day13_crossBrowserTests.C01_PozitifLoginTestiCross"></class>
+            <class name="tests.day13_crossBrowserTests.C02_AmazonTestCross"></class>
         </classes>
     </test>
 </suite>

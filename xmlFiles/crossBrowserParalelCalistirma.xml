@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Class'lari paralel calistirma" parallel="tests" thread-count="2" verbose="3">
+
+    <test name="Sirali crosbrowser chrome">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="tests.day13_crossBrowserTests.C01_PozitifLoginTestiCross"></class>
+
+        </classes>
+    </test>
+
+    <test name="Sirali crosbrowser firefox">
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+
+            <class name="tests.day13_crossBrowserTests.C02_AmazonTestCross"></class>
+        </classes>
+    </test>
+</suite>

@@ -32,7 +32,7 @@ public class AmazonPage {
     @FindBy(xpath = "//h1[@class='a-size-base s-desktop-toolbar a-text-normal']")
     public WebElement aramaSonucElementi;
 
-    @FindBy(xpath = "(//img[@class='s-image'])[1]")
+    @FindBy(xpath = "(//img[@class='s-image'])[2]")
     public WebElement ilkUrun;
 
     @FindBy(xpath = "//span[@id='productTitle']")

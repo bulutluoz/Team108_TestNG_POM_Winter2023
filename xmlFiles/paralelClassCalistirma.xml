@@ -1,0 +1,31 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Class'lari paralel calistirma" parallel="classes" thread-count="2" verbose="3">
+    <test name="Paralel calisma">
+        <classes>
+            <class name="tests.day11_POM_assertions.C02_PozitifLoginTesti"></class>
+            <class name="tests.day10_TestNGFramework.C01_Priority"></class>
+            <class name="tests.day12_xmlFiles.C02_ReusableMethodsSwitchingwindows"></class>
+            <class name="tests.day11_POM_assertions.C05_SoftAssert"></class>
+        </classes>
+    </test>
+</suite>
+
+<!--
+    Paralel calistirma calistiracagimiz test sayisi cok fazla oldugunda
+    toplam test calistirma suresini kisaltmak amaciyla yapilabilir
+
+    Ancak gerek webdriver olusturmada, gerekse test gecislerinde
+    olusan sebeplerden oturu
+    SIRALI calistirdigimizda tumu calisirken
+    PARALEL calistirmada FAIL olan testler cogalir
+
+    Driver class'i ve frameworkumuz paralel calismaya uygun olarak dizayn edilirse
+    paralel calistirilabilir.
+
+    sirali calisma icin kullanilan bir xml dosyasini
+    paralel calismaya dondurmek icin <suite> tagina 2 attribute ekleriz
+
+    1- parallel : paralel calismada gorev paylasiminin hangi seviyede oldugu
+    2- thread-count : kac tane browser'in ayni anda calisacagini belirler
+-->
+

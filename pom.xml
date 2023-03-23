@@ -6,6 +6,7 @@
 
     <groupId>org.example</groupId>
     <artifactId>team108_TestNG_POM</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -45,6 +46,15 @@
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
             <version>4.0.9</version>
+        </dependency>
+        <dependency>
+
+            <groupId>org.seleniumhq.selenium</groupId>
+
+            <artifactId>selenium-http-jdk-client</artifactId>
+
+            <version>4.5.0</version>
+
         </dependency>
 
     </dependencies>

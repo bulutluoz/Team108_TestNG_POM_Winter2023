@@ -48,6 +48,7 @@ public class Driver {
                     driver= new SafariDriver();
                     break;
                 default:
+                    System.setProperty("webdriver.http.factory", "jdk-http-client");
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
 
